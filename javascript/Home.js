@@ -19,7 +19,7 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
           subDataElements[i].textContent = data[data.length -i -1].startdate;
         }
        } catch (e) { console.log(e) };
-        
+        subDataElements[i].addEventListener('click',() => {{ location.href= '/projectinfo/'+data[data.length -i -1]._id+'';}} )
       }
     });
     
