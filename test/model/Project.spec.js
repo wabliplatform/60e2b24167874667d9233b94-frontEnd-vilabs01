@@ -90,6 +90,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property grantagreement (base name: "grantagreement")', function() {
+      // uncomment below and update the code to test the property grantagreement
+      //var instance = new TempApi.Project();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

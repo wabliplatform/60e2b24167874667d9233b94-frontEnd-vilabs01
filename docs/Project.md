@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **image** | **String** |  | 
 **_abstract** | **String** |  | 
 **enddate** | **String** |  | 
+**grantagreement** | **String** |  | 
 
 
