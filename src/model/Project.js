@@ -27,12 +27,12 @@ class Project {
      * @param image {String} 
      * @param _abstract {String} 
      * @param enddate {String} 
-     * @param pimage {String} 
      * @param grantagreement {String} 
+     * @param pimage {String} 
      */
-    constructor(title, startdate, image, _abstract, enddate, pimage, grantagreement) { 
+    constructor(title, startdate, image, _abstract, enddate, grantagreement, pimage) { 
         
-        Project.initialize(this, title, startdate, image, _abstract, enddate, pimage, grantagreement);
+        Project.initialize(this, title, startdate, image, _abstract, enddate, grantagreement, pimage);
     }
 
     /**
@@ -40,14 +40,14 @@ class Project {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, title, startdate, image, _abstract, enddate, pimage, grantagreement) { 
+    static initialize(obj, title, startdate, image, _abstract, enddate, grantagreement, pimage) { 
         obj['title'] = title;
         obj['startdate'] = startdate;
         obj['image'] = image;
         obj['abstract'] = _abstract;
         obj['enddate'] = enddate;
-        obj['pimage'] = pimage;
         obj['grantagreement'] = grantagreement;
+        obj['pimage'] = pimage;
     }
 
     /**
@@ -79,11 +79,11 @@ class Project {
             if (data.hasOwnProperty('enddate')) {
                 obj['enddate'] = ApiClient.convertToType(data['enddate'], 'String');
             }
-            if (data.hasOwnProperty('pimage')) {
-                obj['pimage'] = ApiClient.convertToType(data['pimage'], 'String');
-            }
             if (data.hasOwnProperty('grantagreement')) {
                 obj['grantagreement'] = ApiClient.convertToType(data['grantagreement'], 'String');
+            }
+            if (data.hasOwnProperty('pimage')) {
+                obj['pimage'] = ApiClient.convertToType(data['pimage'], 'String');
             }
         }
         return obj;
@@ -123,14 +123,14 @@ Project.prototype['abstract'] = undefined;
 Project.prototype['enddate'] = undefined;
 
 /**
- * @member {String} pimage
- */
-Project.prototype['pimage'] = undefined;
-
-/**
  * @member {String} grantagreement
  */
 Project.prototype['grantagreement'] = undefined;
+
+/**
+ * @member {String} pimage
+ */
+Project.prototype['pimage'] = undefined;
 
 
 
