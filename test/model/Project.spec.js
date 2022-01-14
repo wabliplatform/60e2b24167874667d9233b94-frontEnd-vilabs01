@@ -102,6 +102,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property projecticon (base name: "projecticon")', function() {
+      // uncomment below and update the code to test the property projecticon
+      //var instance = new TempApi.Project();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **enddate** | **String** |  | 
 **grantagreement** | **String** |  | 
 **pimage** | **String** |  | 
+**projecticon** | **String** |  | 
 
 

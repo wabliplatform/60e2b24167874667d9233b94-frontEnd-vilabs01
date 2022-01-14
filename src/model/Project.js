@@ -29,10 +29,11 @@ class Project {
      * @param enddate {String} 
      * @param grantagreement {String} 
      * @param pimage {String} 
+     * @param projecticon {String} 
      */
-    constructor(title, startdate, image, _abstract, enddate, grantagreement, pimage) { 
+    constructor(title, startdate, image, _abstract, enddate, grantagreement, pimage, projecticon) { 
         
-        Project.initialize(this, title, startdate, image, _abstract, enddate, grantagreement, pimage);
+        Project.initialize(this, title, startdate, image, _abstract, enddate, grantagreement, pimage, projecticon);
     }
 
     /**
@@ -40,7 +41,7 @@ class Project {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, title, startdate, image, _abstract, enddate, grantagreement, pimage) { 
+    static initialize(obj, title, startdate, image, _abstract, enddate, grantagreement, pimage, projecticon) { 
         obj['title'] = title;
         obj['startdate'] = startdate;
         obj['image'] = image;
@@ -48,6 +49,7 @@ class Project {
         obj['enddate'] = enddate;
         obj['grantagreement'] = grantagreement;
         obj['pimage'] = pimage;
+        obj['projecticon'] = projecticon;
     }
 
     /**
@@ -84,6 +86,9 @@ class Project {
             }
             if (data.hasOwnProperty('pimage')) {
                 obj['pimage'] = ApiClient.convertToType(data['pimage'], 'String');
+            }
+            if (data.hasOwnProperty('projecticon')) {
+                obj['projecticon'] = ApiClient.convertToType(data['projecticon'], 'String');
             }
         }
         return obj;
@@ -131,6 +136,11 @@ Project.prototype['grantagreement'] = undefined;
  * @member {String} pimage
  */
 Project.prototype['pimage'] = undefined;
+
+/**
+ * @member {String} projecticon
+ */
+Project.prototype['projecticon'] = undefined;
 
 
 
