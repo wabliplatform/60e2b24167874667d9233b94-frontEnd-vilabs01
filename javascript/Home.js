@@ -7,10 +7,16 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
         if(insideSubDataElement !== null){
           insideSubDataElement.textContent = data[data.length -i -1].title;
         }
+        else if(subDataElements[i].getAttribute('annotationname') === 'title'){
+          subDataElements[i].textContent = data[data.length -i -1].title;
+        }
        } catch (e) { console.log(e) };try { 
         const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'startdate']");
         if(insideSubDataElement !== null){
           insideSubDataElement.textContent = data[data.length -i -1].startdate;
+        }
+        else if(subDataElements[i].getAttribute('annotationname') === 'startdate'){
+          subDataElements[i].textContent = data[data.length -i -1].startdate;
         }
        } catch (e) { console.log(e) };
         
