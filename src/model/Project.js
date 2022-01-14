@@ -24,13 +24,13 @@ class Project {
      * @alias module:model/Project
      * @param title {String} 
      * @param startdate {String} 
-     * @param grantagreement {String} 
+     * @param image {String} 
      * @param _abstract {String} 
      * @param enddate {String} 
      */
-    constructor(title, startdate, grantagreement, _abstract, enddate) { 
+    constructor(title, startdate, image, _abstract, enddate) { 
         
-        Project.initialize(this, title, startdate, grantagreement, _abstract, enddate);
+        Project.initialize(this, title, startdate, image, _abstract, enddate);
     }
 
     /**
@@ -38,10 +38,10 @@ class Project {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, title, startdate, grantagreement, _abstract, enddate) { 
+    static initialize(obj, title, startdate, image, _abstract, enddate) { 
         obj['title'] = title;
         obj['startdate'] = startdate;
-        obj['grantagreement'] = grantagreement;
+        obj['image'] = image;
         obj['abstract'] = _abstract;
         obj['enddate'] = enddate;
     }
@@ -66,8 +66,8 @@ class Project {
             if (data.hasOwnProperty('startdate')) {
                 obj['startdate'] = ApiClient.convertToType(data['startdate'], 'String');
             }
-            if (data.hasOwnProperty('grantagreement')) {
-                obj['grantagreement'] = ApiClient.convertToType(data['grantagreement'], 'String');
+            if (data.hasOwnProperty('image')) {
+                obj['image'] = ApiClient.convertToType(data['image'], 'String');
             }
             if (data.hasOwnProperty('abstract')) {
                 obj['abstract'] = ApiClient.convertToType(data['abstract'], 'String');
@@ -98,9 +98,9 @@ Project.prototype['title'] = undefined;
 Project.prototype['startdate'] = undefined;
 
 /**
- * @member {String} grantagreement
+ * @member {String} image
  */
-Project.prototype['grantagreement'] = undefined;
+Project.prototype['image'] = undefined;
 
 /**
  * @member {String} abstract

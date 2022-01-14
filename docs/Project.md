@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **title** | **String** |  | 
 **startdate** | **String** |  | 
-**grantagreement** | **String** |  | 
+**image** | **String** |  | 
 **_abstract** | **String** |  | 
 **enddate** | **String** |  | 
 
